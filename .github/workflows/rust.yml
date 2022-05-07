@@ -21,7 +21,7 @@ jobs:
     - name: Add rust-src for the nightly toolchain
       run:  rustup component add rust-src --toolchain nightly
     - name: Install toolchain dependencies
-      run:  apt-get update && apt-get install -y vim nano git curl gcc ninja-build cmake libudev-dev python3 python3-pip libusb-1.0-0 libssl-dev pkg-config libtinfo5 llvm-dev libclang-dev clang
+      run:  sudo apt update && sudo apt install -y vim nano git curl gcc ninja-build cmake libudev-dev python3 python3-pip libusb-1.0-0 libssl-dev pkg-config libtinfo5 llvm-dev libclang-dev clang
     - name: Install the Espressif toolchain
       run:  cargo install cargo-generate cargo-espflash espmonitor bindgen ldproxy
     - name: Build
